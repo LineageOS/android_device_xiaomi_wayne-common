@@ -24,9 +24,6 @@
 # Inherit from sdm660-common
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 
-# Inherit proprietary files
-$(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
-
 # Inherit properties
 $(call inherit-product, $(LOCAL_PATH)/properties.mk)
 
@@ -53,5 +50,5 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     init.device.rc
 
-# Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
