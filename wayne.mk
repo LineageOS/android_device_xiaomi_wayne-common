@@ -31,7 +31,8 @@ WAYNE_PATH := device/xiaomi/wayne-common
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(WAYNE_PATH)/overlay
+    $(WAYNE_PATH)/overlay \
+    $(WAYNE_PATH)/overlay-lineage
 
 # Audio
 PRODUCT_COPY_FILES += \
