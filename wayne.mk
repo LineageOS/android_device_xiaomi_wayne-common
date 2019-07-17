@@ -48,6 +48,9 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# Haters gonna hate..
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # Init
 PRODUCT_PACKAGES += \
     init.device.rc
