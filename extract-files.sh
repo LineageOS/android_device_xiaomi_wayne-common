@@ -17,61 +17,6 @@
 
 set -e
 
-DEVICE_COMMON=wayne-common
-VENDOR=xiaomi
+export DEVICE_COMMON=sdm660-common
 
-# Load extract_utils and do some sanity checks
-MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
-
-LINEAGE_ROOT="$MY_DIR"/../../..
-
-HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
-    exit 1
-fi
-. "$HELPER"
-
-# default to not sanitizing the vendor folder before extraction
-clean_vendor=false
-
-while [ "$1" != "" ]; do
-    case $1 in
-        -p | --path )           shift
-                                SRC=$1
-                                ;;
-        -s | --section )        shift
-                                SECTION=$1
-                                clean_vendor=false
-                                ;;
-        -c | --clean-vendor )   clean_vendor=true
-                                ;;
-    esac
-    shift
-done
-
-if [ -z "$SRC" ]; then
-    SRC=adb
-fi
-
-# Initialize the common helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true $clean_vendor
-
-extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
-
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
-    extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
-fi
-
-"$MY_DIR"/setup-makefiles.sh
-
-DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
-
-patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/bin/mlipayd@1.1
-patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay.so
-patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay@1.1.so
-sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay.so
-sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "$DEVICE_BLOB_ROOT"/vendor/lib64/libmlipay@1.1.so
+./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@
