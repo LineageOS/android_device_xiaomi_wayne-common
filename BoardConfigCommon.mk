@@ -27,9 +27,6 @@
 
 WAYNE_PATH := device/xiaomi/wayne-common
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := wayne
-
 # Kernel
 TARGET_KERNEL_CONFIG := wayne_defconfig
 
