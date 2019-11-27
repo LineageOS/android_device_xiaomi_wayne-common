@@ -32,9 +32,6 @@ on boot
     chmod 0660 /sys/android_camera/sensor
     chown system system /sys/android_camera/sensor
 
-    # Fingerprint
-    chmod 0600 /data/misc/fpc/calibration_image.pndat
-
     # Flash
     chmod 0660 /sys/class/leds/led:flash_0/brightness
     chmod 0660 /sys/class/leds/led:flash_1/brightness
