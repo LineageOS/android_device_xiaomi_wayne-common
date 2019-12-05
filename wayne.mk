@@ -29,6 +29,10 @@ $(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
 
 WAYNE_PATH := device/xiaomi/wayne-common
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(WAYNE_PATH)/overlay
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(WAYNE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
