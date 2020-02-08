@@ -45,5 +45,9 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# Init
+PRODUCT_PACKAGES += \
+    init.device.rc
+
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
