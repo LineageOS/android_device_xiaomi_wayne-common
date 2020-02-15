@@ -733,9 +733,42 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
+# Consumerir - from jasmine
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so
+
 # Display Calibration - from jasmine
 vendor/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml
 vendor/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml
+
+# Fingerprint firmware - from jasmine
+etc/firmware/goodixfp.b00
+etc/firmware/goodixfp.b01
+etc/firmware/goodixfp.b02
+etc/firmware/goodixfp.b03
+etc/firmware/goodixfp.b04
+etc/firmware/goodixfp.b05
+etc/firmware/goodixfp.b06
+etc/firmware/goodixfp.b07
+etc/firmware/goodixfp.mdt
+vendor/firmware/fpctzappfingerprint.b00
+vendor/firmware/fpctzappfingerprint.b01
+vendor/firmware/fpctzappfingerprint.b02
+vendor/firmware/fpctzappfingerprint.b03
+vendor/firmware/fpctzappfingerprint.b04
+vendor/firmware/fpctzappfingerprint.b05
+vendor/firmware/fpctzappfingerprint.b06
+vendor/firmware/fpctzappfingerprint.b07
+vendor/firmware/fpctzappfingerprint.mdt
+
+# Graphics firmware - from jasmine
+vendor/firmware/a512_zap.b00
+vendor/firmware/a512_zap.b01
+vendor/firmware/a512_zap.b02
+vendor/firmware/a512_zap.elf
+vendor/firmware/a512_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+vendor/firmware/a540_gpmu.fw2
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -748,3 +781,30 @@ vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+
+# Sensors - from jasmine
+vendor/bin/sensors.qti
+vendor/etc/sensors/hals.conf
+vendor/etc/sensors/sensor_def_qcomdev.conf
+vendor/lib/hw/activity_recognition.sdm660.so
+vendor/lib/libsensor_reg.so
+vendor/lib/libsensor1.so
+vendor/lib/sensors.ssc.so
+vendor/lib64/hw/activity_recognition.sdm660.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsensor1.so
+vendor/lib64/sensors.ssc.so
+
+# Thermal - from jasmine
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-engine-map.conf
+vendor/etc/thermal-engine-normal.conf
+vendor/etc/thermal-engine-video.conf
+vendor/bin/thermal-engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalfeature.so
+vendor/lib64/libthermalioctl.so
+
+# Wifi - from jasmine
+vendor/bin/cnss-daemon
