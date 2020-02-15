@@ -27,6 +27,10 @@
 
 WAYNE_PATH := device/xiaomi/wayne-common
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(WAYNE_PATH)/vendor_framework_compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += $(WAYNE_PATH)/manifest.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := wayne_defconfig
 
