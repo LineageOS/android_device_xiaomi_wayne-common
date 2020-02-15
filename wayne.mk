@@ -29,6 +29,9 @@ $(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
 
 WAYNE_PATH := device/xiaomi/wayne-common
 
+# Inherit properties
+$(call inherit-product, $(WAYNE_PATH)/properties.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(WAYNE_PATH)/overlay \
