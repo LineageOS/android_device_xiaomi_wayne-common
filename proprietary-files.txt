@@ -736,9 +736,9 @@ vendor/lib/libmmcamera_isp_sub_module.so
 # Consumerir - from jasmine
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so
 
-# Display Calibration - from jasmine
-vendor/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml
+# Display Calibration - from jasmine V9.6.17.0.ODIMIFE
+vendor/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml|e6632fbcb6af3082c4cd17afe26a4aab1e63c6ed
+vendor/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml|b3ebd0fcd2ed93e621b9a5c13a76ffca7b2c232d
 
 # Fingerprint firmware - from jasmine
 etc/firmware/goodixfp.b00
