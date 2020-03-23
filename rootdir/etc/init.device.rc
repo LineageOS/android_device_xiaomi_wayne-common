@@ -27,6 +27,8 @@
 #
 #
 
+import /vendor/etc/init/hw/init.verity.rc
+
 on boot
     # Camera
     chmod 0660 /sys/android_camera/sensor
