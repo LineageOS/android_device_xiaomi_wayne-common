@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5bde082_7b065bab",
+        "filename": "overlay/frameworks/base/packages/SystemUI/res/values/dimens.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 18106
+      },
+      "writtenOn": "2020-04-26T14:37:30Z",
+      "side": 1,
+      "message": "This one is already present in vendor/lineage",
+      "revId": "4867b36cfb1cc285bf55640f5c1791c6b8b6c74b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
