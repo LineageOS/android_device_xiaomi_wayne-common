@@ -22,5 +22,8 @@ TARGET_KERNEL_CONFIG := wayne_defconfig
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
 
+# Properties
+TARGET_VENDOR_PROP += $(WAYNE_PATH)/vendor.prop
+
 # Inherit the proprietary files
 include vendor/xiaomi/wayne-common/BoardConfigVendor.mk
