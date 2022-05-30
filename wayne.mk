@@ -38,7 +38,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.3-service-qti
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
