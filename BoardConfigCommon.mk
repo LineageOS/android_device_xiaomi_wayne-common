@@ -16,7 +16,7 @@ TARGET_SCREEN_DENSITY := 440
 DEVICE_MANIFEST_FILE += $(WAYNE_PATH)/manifest.xml
 
 # Kernel
-TARGET_KERNEL_CONFIG := wayne_defconfig
+TARGET_KERNEL_CONFIG += vendor/xiaomi/wayne.config
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
