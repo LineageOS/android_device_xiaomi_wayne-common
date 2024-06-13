@@ -28,7 +28,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    libpiex_shim
+    libpiex_shim \
+    libpng.vendor:32
 
 # Consumerir
 BOARD_HAVE_IR := true
