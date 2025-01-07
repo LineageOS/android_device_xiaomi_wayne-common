@@ -20,6 +20,10 @@ from extract_utils.main import (
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libMiWatermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
+    'vendor/lib/libmmcamera_faceproc.so': blob_fixup()
+        .clear_symbol_version('__aeabi_memcpy')
+        .clear_symbol_version('__aeabi_memset')
+        .clear_symbol_version('__gnu_Unwind_Find_exidx'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
