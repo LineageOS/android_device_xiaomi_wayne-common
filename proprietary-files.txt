@@ -107,6 +107,8 @@ vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libremosaic_daemon.so
+vendor/lib/libSonyIMX376C3RmscLibrary.so
+vendor/lib/libSonyIMX376KRmscLibrary.so
 vendor/lib/libvideoutils.so
 vendor/lib/libvidhance.so
 vendor/lib/libvidhance_gyro.so
