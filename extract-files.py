@@ -17,6 +17,13 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'hardware/qcom-caf/sdm660',
+    'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/display',
+    'vendor/xiaomi/sdm660-common',
+]
+
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libMiWatermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
@@ -30,7 +37,7 @@ module = ExtractUtilsModule(
     'wayne-common',
     'xiaomi',
     blob_fixups=blob_fixups,
-    check_elf=False,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
